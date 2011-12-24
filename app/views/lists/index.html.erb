@@ -1,0 +1,12 @@
+<h1>Listing lists</h1>
+<table >
+	<tbody id="lists">
+		<% @lists.each do |list| %>
+		<tr>
+			<td><%= list.title %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<br />
+<%= link_to 'New List', new_list_path %> 
