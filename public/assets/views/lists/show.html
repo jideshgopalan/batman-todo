@@ -1,0 +1,16 @@
+<div class="page-header">
+	<h1 data-bind="list.title">Show</h1>
+</div>
+
+
+<div id="new-item" class="wrapper">
+  <form accept-charset="UTF-8" class="new_item" id="new_item" data-formfor-item="list.item" data-event-submit="create_item">
+    <div data-partial="items/_form"></div>
+  </form>
+</div>
+
+<ul id="items" class="unstyled">
+  <li data-foreach-item="list.items" >
+    <input type="checkbox" data-bind="item.done" /><strong data-bind="item.content">content will go here</strong>
+  </li>
+</ul>
