@@ -69,10 +69,6 @@ class ItemsController < ApplicationController
   def destroy
     @item = Item.find(params[:id])
     @item.destroy
-
-    respond_to do |format|
-      format.html { redirect_to items_url }
-      format.json { head :ok }
-    end
+    respond_with @item
   end
 end

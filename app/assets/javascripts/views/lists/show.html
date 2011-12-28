@@ -9,8 +9,15 @@
   </form>
 </div>
 
-<ul id="items" class="unstyled">
+<ul id="items" class="unstyled items">
   <li data-foreach-item="list.items" >
-    <input type="checkbox" data-bind="item.done" /><strong data-bind="item.content">content will go here</strong>
+    <div class="view">
+    	<input type="checkbox" data-bind="item.done" data-event-change="item.save"/>
+    	<span data-bind="item.content" data-addclass-done="item.done">content will go here</span>
+    	<span class="destroy" data-event-click="item.destroy"></span>
+    </div>
+    <div class="edit">
+    	
+    </div>
   </li>
 </ul>

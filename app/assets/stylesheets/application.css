@@ -12,3 +12,31 @@
 	font-size: 18px;
 	width:500px;
 }
+
+.items li,.lists li{
+    border-bottom: 1px solid #CCCCCC;
+    font-size: 24px;
+    list-style: none outside none;
+    padding: 15px 20px 15px 0;
+    position: relative;
+}
+
+.items li,.lists li span{
+	cursor: pointer;
+}
+
+.items li span.destroy{
+	background: url("/assets/destroy.png") no-repeat scroll center center transparent;
+    cursor: pointer;
+    display: none;
+    height: 20px;
+    margin-right: 20px;
+    position: absolute;
+    right: 0;
+    top: 16px;
+    width: 20px;
+}
+
+.items li:hover span.destroy{
+    display: inline;
+}

@@ -1,3 +1,4 @@
+
 <div class="page-header">
 	<h1>My Lists</h1>
 </div>
@@ -8,8 +9,10 @@
   </form>
 </div>
 
-<ul id="lists" class="unstyled">
+<ul id="lists" class="unstyled lists">
   <li data-foreach-list="List.all" >
-    <a data-route="list"><h4 data-bind="list.title"></h4></a>
+  	<div class="view" >
+  		<span data-route="list" data-bind="list.title"></span>
+    </div>
   </li>
 </ul>

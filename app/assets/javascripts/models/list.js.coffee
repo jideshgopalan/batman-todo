@@ -2,6 +2,7 @@ class Todo.List extends Batman.Model
   @storageKey: 'lists'
   @persist Batman.RailsStorage
   @encode 'title', 'id'
+  @validate 'title', {presence: true}
   
   @hasMany 'items'
   
