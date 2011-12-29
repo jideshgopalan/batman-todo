@@ -6,10 +6,7 @@ class ItemsController < ApplicationController
     @list = List.find(params[:list_id])
     @items = @list.items
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @items }
-    end
+    respond_with @items
   end
 
   # GET /items/1
@@ -52,16 +49,8 @@ class ItemsController < ApplicationController
   # PUT /items/1.json
   def update
     @item = Item.find(params[:id])
-
-    respond_to do |format|
-      if @item.update_attributes(params[:item])
-        format.html { redirect_to @item, notice: 'Item was successfully updated.' }
-        format.json { head :ok }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @item.errors, status: :unprocessable_entity }
-      end
-    end
+    @item.update_attributes(params[:item])
+    respond_with @item
   end
 
   # DELETE /items/1

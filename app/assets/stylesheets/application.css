@@ -25,7 +25,7 @@
 	cursor: pointer;
 }
 
-.items li span.destroy{
+.items li span.destroy, .lists li span.destroy{
 	background: url("/assets/destroy.png") no-repeat scroll center center transparent;
     cursor: pointer;
     display: none;
@@ -37,6 +37,10 @@
     width: 20px;
 }
 
-.items li:hover span.destroy{
+.items li:hover span.destroy,.lists li:hover span.destroy{
     display: inline;
+}
+.items li span.done{
+    color: #777777;
+    text-decoration: line-through;	
 }
